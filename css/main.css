@@ -297,10 +297,11 @@ header .button {
         width: 940px;
     }
     .third {
-        float: left;
+        float: right;
         width: 30%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+        height: 400px;
+        margin: -30px 34px 0px 0px;
+
     }
     .third:first-child {
         margin-left: 0;

@@ -73,12 +73,38 @@ function redraw(animation){
 	}
 	var canvas = document.getElementById("shipments");
 	var ctx = canvas.getContext("2d");
-	new Chart(ctx).Line(data, options);
-
-
+	new Chart(ctx).Bar(data, options);
 
 	var data = {
-		labels : ["Helpful","Friendly","Kind","Rude","Slow","Frustrating"],
+		labels : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+		datasets : [
+			{
+				label: 'Dataset 1',
+				fillColor : "rgba(99,123,133,0.4)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : [65,54,30,81,56,55,40]
+			},
+			{
+				label: 'Dataset 2',
+				fillColor : "rgba(219,186,52,0.4)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : [20,60,42,58,31,21,50]
+			},
+		]
+	}
+
+
+	
+	var canvas = document.getElementById("operations");
+	var ctx = canvas.getContext("2d");
+	new Chart(ctx).Line(data, options);
+
+	var data = {
+		labels : ["ProductAPI","InventoryAPI","OrderAPI","StatusAPI","UserAPI","ApplicationAPI"],
 		datasets : [
 			{
 				fillColor : "rgba(220,220,220,0.5)",
